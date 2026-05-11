@@ -99,7 +99,7 @@ function submitFinalOrder() {
     message += `العنوان: ${address}`;
 
     // رقم الواتساب الخاص بك (ضعي رقمك هنا بدلاً من 2011525800378)
-    const whatsappLink = `https://wa.me/011152800378?text=${message}`;
+    const whatsappLink = `https://wa.me/2011152800378?text=${message}`;
     
     window.open(whatsappLink, '_blank');
 }
@@ -118,5 +118,5 @@ function sendSpecialOrder() {
     message += `الاسم: ${specName}%0A`;
     message += `التفاصيل: ${specDetails}`;
 
-    window.open(`https://wa.me/201234567890?text=${message}`, '_blank');
+    window.open(`https://wa.me/201152800378?text=${message}`, '_blank');
 }
