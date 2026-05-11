@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لمسات يدوية | Handmade Store</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-2">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="img/logi.webp" alt="Logo" class="main-logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav fw-bold">
+                    <li class="nav-item"><a class="nav-link px-3" href="#home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#products">المتجر</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#special-order">طلب خاص</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#about">قصتنا</a></li>
+                </ul>
+            </div>
+
+            <div class="d-flex align-items-center cart-section">
+                <button class="btn btn-outline-danger position-relative rounded-pill border-2 fw-bold" onclick="toggleCart()">
+                    <i class="fas fa-shopping-basket me-2"></i>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="main-header" id="home">
+        <img src="img/hed.wepb.webp" alt="Handmade Banner" class="banner-img">
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white d-flex align-items-center" id="home">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold mb-3">صُنع بكل حب خصيصاً لكِ</h1>
+            <p class="lead mb-4">مشغولات يدوية تحكي قصة إبداع في كل تفصيلة</p>
+            <a href="#products" class="btn btn-danger btn-lg rounded-pill px-5">تصفحي المنتجات</a>
+        </div>
+    </section>
+
+    <!-- قسم المنتجات المطور -->
+<section id="products" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h6 class="text-danger fw-bold text-uppercase">اكتشفي مجموعتنا</h6>
+            <h2 class="display-5 fw-bold">أحدث الأعمال اليدوية</h2>
+            <div class="bg-danger mx-auto" style="height: 3px; width: 60px;"></div>
+        </div>
+
+        <!-- شبكة المنتجات -->
+        <div class="row g-3 g-md-4">
+            
+            <section id="products" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">منتجاتنا المميزة</h2>
+            <div class="bg-danger mx-auto" style="height: 3px; width: 60px;"></div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 product-card">
+                    <img src="img/1.jpg" class="card-img-top custom-img" alt="إكسسوار">
+                    <div class="card-body text-center">
+                        <h6 class="fw-bold">عقد لؤلؤ وفراشة</h6>
+                        <p class="text-danger fw-bold">80 EGP</p>
+                        <button class="btn btn-sm btn-dark rounded-pill w-100" onclick="addToCart('عقد لؤلؤ', 150)">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 product-card">
+                    <img src="img/2.jpg" class="card-img-top custom-img" alt="حقيبة كروشيه">
+                    <div class="card-body text-center">
+                        <h6 class="fw-bold">حقيبة يد خوص</h6>
+                        <p class="text-danger fw-bold">400 EGP</p>
+                        <button class="btn btn-sm btn-dark rounded-pill w-100" onclick="addToCart('حقيبة يد خوص', 450)">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 product-card">
+                    <img src="img/3.jpg" class="card-img-top custom-img" alt="حقيبة لولي">
+                    <div class="card-body text-center">
+                        <h6 class="fw-bold">حقيبة لولي سواريه</h6>
+                        <p class="text-danger fw-bold">500 EGP</p>
+                        <button class="btn btn-sm btn-dark rounded-pill w-100" onclick="addToCart('حقيبة لولي', 600)">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 product-card">
+                    <img src="img/4.jpg" class="card-img-top custom-img" alt="سلسلة موبايل">
+                    <div class="card-body text-center">
+                        <h6 class="fw-bold">سلسلة موبايل ملونة</h6>
+                        <p class="text-danger fw-bold">90 EGP</p>
+                        <button class="btn btn-sm btn-dark rounded-pill w-100" onclick="addToCart('سلسلة موبايل', 80)">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 product-card">
+                    <img src="img/5.jpg" class="card-img-top custom-img" alt="ديكور خشبي">
+                    <div class="card-body text-center">
+                        <h6 class="fw-bold">بيوت خشبية للديكور</h6>
+                        <p class="text-danger fw-bold">300 EGP</p>
+                        <button class="btn btn-sm btn-dark rounded-pill w-100" onclick="addToCart('بيوت ديكور', 250)">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 product-card">
+                    <img src="img/6 (2).jpg" class="card-img-top custom-img" alt="إكسسوار">
+                    <div class="card-body text-center">
+                        <h6 class="fw-bold">جراب هاند ماد</h6>
+                        <p class="text-danger fw-bold">220 EGP</p>
+                        <button class="btn btn-sm btn-dark rounded-pill w-100" onclick="addToCart('مجموعة سلاسل', 120)">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 product-card">
+                    <img src="img/7.jpg" class="card-img-top custom-img" alt="مكرامية">
+                    <div class="card-body text-center">
+                        <h6 class="fw-bold">علاقات زرع مكرامية</h6>
+                        <p class="text-danger fw-bold">350 EGP</p>
+                        <button class="btn btn-sm btn-dark rounded-pill w-100" onclick="addToCart('مكرامية زرع', 300)">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 product-card">
+                    <img src="img/8.jpg" class="card-img-top custom-img" alt="تطريز أطفال">
+                    <div class="card-body text-center">
+                        <h6 class="fw-bold">طقم أطفال مطرز باسم</h6>
+                        <p class="text-danger fw-bold">1000 EGP</p>
+                        <button class="btn btn-sm btn-dark rounded-pill w-100" onclick="addToCart('طقم أطفال مطرز', 500)">إضافة للسلة</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Special Order Section -->
+    <section id="special-order" class="py-5 bg-light">
+        <div class="container text-center">
+            <div class="p-5 shadow-sm rounded-4 bg-white">
+                <i class="fas fa-paint-brush fa-3x text-danger mb-3"></i>
+                <h3 class="fw-bold">عندك فكرة معينة؟ ✨</h3>
+                <p>ننفذ لكِ أي تصميم خاص أو تعديل على الألوان ليناسب ذوقك!</p>
+                <button class="btn btn-outline-danger btn-lg rounded-pill" data-bs-toggle="modal" data-bs-target="#specialModal">اطلبي تصميمك الخاص</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0 text-center">
+                    <img src="img/logi.webp" class="img-fluid rounded-4 shadow" alt="قصتنا">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold">عن براند لمسات</h2>
+                    <p>بدأنا كشغف صغير لتحويل المواد البسيطة إلى قطع فنية تنبض بالحياة. كل قطعة نوفرها في متجرنا صنعت يدوياً بالكامل وبدقة متناهية لتليق بتميزك.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-dark rounded-circle"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-dark rounded-circle"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="btn btn-dark rounded-circle"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar shadow">
+        <div class="p-3 border-bottom d-flex justify-content-between align-items-center bg-danger text-white">
+            <h5 class="mb-0">حقيبة المشتريات</h5>
+            <button class="btn-close btn-close-white" onclick="toggleCart()"></button>
+        </div>
+        <div id="cart-items" class="p-3">
+            <!-- Items appear here -->
+        </div>
+        <div class="p-3 border-top position-absolute bottom-0 w-100 bg-white">
+            <div class="d-flex justify-content-between mb-3 fw-bold">
+                <span>الإجمالي:</span>
+                <span class="text-danger"><span id="cart-total">0</span> EGP</span>
+            </div>
+            <button class="btn btn-danger w-100 rounded-pill py-2" onclick="openOrderModal()">تأكيد الطلب</button>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Modal طلب خاص -->
+    <div class="modal fade" id="specialModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">طلب تصميم خاص 🎨</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="spec-name" class="form-control mb-3 rounded-pill" placeholder="اسمك">
+                    <textarea id="spec-details" class="form-control mb-3 rounded-4" rows="4" placeholder="وصفي لنا القطعة التي في خيالك..."></textarea>
+                    <button class="btn btn-danger w-100 rounded-pill" onclick="sendSpecialOrder()">إرسال عبر واتساب</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal بيانات الشحن -->
+    <div class="modal fade" id="orderModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">بيانات الشحن 🚚</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <input type="text" id="cust-name" class="form-control mb-3 rounded-pill" placeholder="الاسم بالكامل">
+                    <input type="tel" id="cust-phone" class="form-control mb-3 rounded-pill" placeholder="رقم الموبايل">
+                    <textarea id="cust-address" class="form-control mb-3 rounded-4" placeholder="العنوان بالتفصيل"></textarea>
+                    <button class="btn btn-success w-100 rounded-pill" onclick="submitFinalOrder()">تأكيد وشراء</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-4 bg-dark text-white text-center">
+        <p class="mb-0">&copy; 2026 لمسات يدوية | Handmade With Love</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

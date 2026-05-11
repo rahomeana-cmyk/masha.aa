@@ -1,0 +1,168 @@
+/* 1. الإعدادات العامة للموقع */
+:root {
+    --main-red: #dc3545;      /* لون البراند الأحمر */
+    --dark-text: #2d2d2d;     /* لون النصوص */
+    --light-bg: #fdfdfd;      /* خلفية الموقع */
+    --transition: 0.3s ease;  /* سرعة التأثيرات */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* 2. تنسيق الناف بار (Navbar) */
+.navbar {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 8px 0;
+}
+
+/* اللوجو على اليمين */
+.main-logo {
+    height: 65px; /* مقاس اللوجو المثالي */
+    width: auto;
+    object-fit: contain;
+}
+
+/* القائمة في المنتصف */
+.navbar-nav {
+    gap: 10px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 700;
+    color: var(--dark-text) !important;
+    font-size: 1.05rem;
+    position: relative;
+    transition: var(--transition);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--main-red) !important;
+}
+
+/* الخط المتحرك تحت لينكات القائمة */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-red);
+    transition: var(--transition);
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 70%;
+}
+
+/* 3. تنسيق صورة الهيدر (المين هيدر) */
+.main-header {
+    width: 100%;
+    line-height: 0; /* يمنع ظهور مسافة بيضاء تحت الصورة */
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto; /* يحافظ على أبعاد الصورة الأصلية */
+    display: block;
+}
+
+/* 4. قسم المنتجات */
+#products {
+    padding: 60px 0;
+}
+
+.product-card {
+    border-radius: 20px !important;
+    overflow: hidden;
+    transition: var(--transition);
+    border: none !important;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.custom-img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover; /* يضمن عدم تمدد صور المنتجات */
+    border-bottom: 1px solid #f8f9fa;
+}
+
+/* 5. السلة الجانبية (Sidebar Cart) */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    left: -400px; /* مخفية */
+    width: 350px;
+    max-width: 85%;
+    height: 100vh;
+    background: white;
+    z-index: 2000;
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 5px 0 25px rgba(0,0,0,0.1);
+}
+
+.cart-sidebar.active {
+    left: 0; /* تظهر عند الضغط */
+}
+
+/* 6. تعديلات الموبايل (Responsive) */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: #fff;
+        margin-top: 15px;
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+    
+    .main-logo {
+        height: 50px; /* تصغير اللوجو في الموبايل */
+    }
+
+    .custom-img {
+        height: 180px; /* تصغير صور المنتجات لتناسب الشاشة */
+    }
+
+    .banner-img {
+        /* اختياري: يمكنك جعل الصورة ثابتة الطول في الموبايل لو رغبتِ */
+        min-height: 250px; 
+        object-fit: cover;
+    }
+}
+
+/* زر السلة والتنبيهات */
+#cart-count {
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.btn-outline-danger {
+    border-width: 2px;
+    transition: var(--transition);
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--main-red);
+    color: #fff;
+}
