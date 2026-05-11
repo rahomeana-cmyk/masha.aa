@@ -99,7 +99,7 @@ function submitFinalOrder() {
     message += `العنوان: ${address}`;
 
     // رقم الواتساب الخاص بك (ضعي رقمك هنا بدلاً من 2011525800378)
-    const whatsappLink = `https://wa.me/011525800378?text=${message}`;
+    const whatsappLink = `https://wa.me/011152800378?text=${message}`;
     
     window.open(whatsappLink, '_blank');
 }
